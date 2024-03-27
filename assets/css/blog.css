@@ -1,43 +1,65 @@
-body{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+@import url('style.css');
 
-header{
-    display: flex;
-    justify-content: space-between;
+header {
     padding: 10px 0;
-    background-color: grey;
+    background-color: rgb(62, 105, 180);
+    color: white;
+
 }
 
-header button{
-    margin-right: 3%;
-}
-
-header h1{
+header h1 {
+    text-decoration: overline;
     margin-left: 3%;
 }
 
-main{
+header nav {
+    margin-right: 3%;
+}
+
+header a {
+    color: white;
+    font-size: 110%;
+    transition: .5s;
+}
+
+header a:hover {
+    text-decoration: overline;
+}
+
+header button {
+    padding: 3px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+main {
     margin: 0 3%;
 }
 
-main section{
-    margin-top: 10px ;
+main h2 {
+    margin: 15px 0;
+    font-size: 160%;
+}
+
+main section.new {
+    margin-bottom: 15px;
     padding: 5px;
-    border: 3px solid black;
+    border: 1px solid black;
+    background-color: #ebeae8;
 }
 
-section p{
+section p.opening {
+    font-size: 140%;
+}
+
+section p.text {
     font-size: 120%;
+    margin-top: 5px;
 }
 
-section #user{
-    text-decoration: underline;
-}
-
-section #title{
-    margin: 3px 0;
+section p.user {
+    font-size: 100%;
+    margin-top: 30px;
+    text-decoration: overline;
 }

@@ -1,9 +1,21 @@
-const username = localStorage.getItem('username')
-const title = localStorage.getItem('title')
-const content = localStorage.getItem('content')
+const blogOutput = document.querySelector('section')
 
-console.log(JSON.parse(localStorage.getItem('dataArray')))
+const posts = JSON.parse(localStorage.getItem('blogArray')) || []
 
-document.getElementById('username').textContent = username
-document.getElementById('title-data').textContent = title
-document.getElementById('content').textContent = content
+function addNewPost() {
+    if (posts.length) {
+        blogOutput.innerHTML = ''
+    }
+
+    for (let post of posts) {
+        blogOutput.insertAdjacentHTML('beforeend', `
+        <section class="new">
+            <p class="opening">${post.title}</p>
+            <p class="text">${post.content}</p>
+            <p class="user">Posted by: ${post.username}</p>
+        </section>
+        `)
+    }
+}
+
+addNewPost()

@@ -1,12 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+/* Resets */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-/* body{
-    height: 100%;
+html,
+body {
+    height: 100%
+}
+
+body {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 3%;
+    background-color: #ffffff;
+    transition: background-color 0.5s;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Global styles */
+.row,
+.column {
     display: flex;
+}
+
+.column {
     flex-direction: column;
-    min-height: 100vh;
-} */
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+/* Light/Dark Styles */
+.light-mode {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}

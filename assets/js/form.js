@@ -1,28 +1,33 @@
 const blogForm = document.getElementById('blog-form')
-const username = document.getElementById('username')
-const title = document.getElementById('title')
-const content = document.getElementById('content')
-// const submitButton = document.getElementById('submit-button')
 
-blogForm.addEventListener('submit', function (event) {
-    event.preventDefault() //prevents the form from auto submiting
+function addBlog(e) {
+   e.preventDefault()
 
-   const usernameValue = username.value
-   const titleValue = title.value
-   const contentValue = content.value
+   const usernameValue = blogForm.username.value
+   const titleValue = blogForm.title.value
+   const contentValue = blogForm.content.value
 
-   localStorage.setItem('dataArray', JSON.stringify([usernameValue, titleValue, contentValue]))
+   const raw = localStorage.getItem('blogArray')
+   const blogArray = JSON.parse(raw) || []
 
-   localStorage.setItem('username', usernameValue)
-   localStorage.setItem('title', titleValue)
-   localStorage.setItem('content', contentValue)
+   const newBlog = {
+      username: usernameValue,
+      title: titleValue,
+      content: contentValue
+   }
 
+   blogArray.push(newBlog)
+
+   localStorage.setItem('blogArray', JSON.stringify(blogArray))
 
    window.location = './blog.html'
+}
 
-})
+function init() {
+   blogForm.addEventListener('submit', addBlog)
+}
 
-
+init()
 
 // fetch
 
