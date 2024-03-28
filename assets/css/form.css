@@ -1,0 +1,127 @@
+/* IMPORTED CSS FILE */
+@import url('style.css');
+
+/* ROOT COLORS */
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #333333;
+    --fg-light: #ebeae8;
+    --fg-dark: rgb(31, 31, 31);
+    --text-light: #333333;
+    --text-dark: #ebeae8;
+    --banner-light: rgb(62, 105, 180);
+    --banner-dark: rgb(31, 31, 31);
+    --banner-text-light: white;
+    --banner-text-dark: #ebeae8;
+    --shadow-light: rgba(0, 0, 0, 0.7);
+    --shadow-dark: rgba(235, 234, 232, 0.7);
+    --input-light: rgb(255, 255, 255);
+    --input-dark: #ebeae8;
+}
+/* HEADER */
+header {
+    padding: 10px 0;
+    background-color: var(--banner-light);
+    color: white;
+
+}
+
+header.dark-mode {
+    background-color: var(--banner-dark);
+}
+
+header h1 {
+    text-decoration: overline;
+    margin-left: 3%;
+}
+
+header nav {
+    margin-right: 3%;
+    transition: background-color 0.5s;
+
+}
+
+header a {
+    color: white;
+    font-size: 110%;
+    transition: .5s;
+}
+
+header a:hover {
+    text-decoration: overline;
+}
+
+header button {
+    color: white;
+    padding: 3px 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-left: 25px;
+    background-color: var(--bg-dark);
+    transition: background-color 0.5s;
+
+}
+
+/* START MAIN */
+main {
+    display: flex;
+    margin: 0 3%;
+}
+
+main form {
+    background-color: #ebeae8;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.7);
+    width: 450px;
+    padding: 2rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: auto;
+    font-size: 115%;
+    transition: background-color 0.5s;
+}
+
+main form h2 {
+    margin: 0 auto;
+    transition: background-color 0.5s;
+    margin-bottom: 15px;
+}
+
+form input,
+textarea {
+    font-size: 100%;
+    margin: 3px 0;
+    padding: 3px;
+    transition: background-color 0.5s;
+}
+
+/* POST BUTTON ANIMATION */
+main #post-button {
+    background-color: rgb(42, 206, 124);
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 115%;
+    transition: .5s;
+    transform: scale(1);
+}
+
+#post-button:hover,
+#post-button:focus {
+    transform: scale(1.05);
+}
+
+/* Media queries for screen responsiveness */
+@media (max-width: 410px) {
+    header h1{
+        font-size: 1.5em;
+    }
+    
+    main form{
+        padding: 1rem;
+    }
+    
+    main form h2{
+        font-size: 1.3em;
+        margin-bottom: 5px;
+    }
+}
