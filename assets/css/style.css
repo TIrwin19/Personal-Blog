@@ -1,3 +1,22 @@
+/* ROOOT COLORS TO BE USED */
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #333333;
+    --fg-light: #ebeae8;
+    --fg-dark: rgb(31, 31, 31);
+    --text-light: #333333;
+    --text-dark: #ebeae8;
+    --banner-light: rgb(62, 105, 180);
+    --banner-dark: rgb(31, 31, 31);
+    --banner-text-light: white;
+    --banner-text-dark: #ebeae8;
+    --shadow-light: rgba(0, 0, 0, 0.7);
+    --shadow-dark: rgba(235, 234, 232, 0.7);
+    --input-light: rgb(255, 255, 255);
+    --input-dark: #ebeae8;
+}
+
+/* IMPORTTED FONT */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap');
 
 /* Resets */
@@ -17,12 +36,12 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 3%;
-    background-color: #ffffff;
+    background-color: var(--bg-light);
     transition: background-color 0.5s;
 }
 
 a {
-    color: #333;
+    color: var(--text-light);
     text-decoration: none;
 }
 
@@ -34,6 +53,18 @@ textarea {
 
 button {
     cursor: pointer;
+}
+
+footer {
+    padding: 15px 0;
+}
+
+footer a {
+    margin: 0 5px 5px;
+}
+
+footer a:hover {
+    text-decoration: overline;
 }
 
 /* Global styles */
@@ -67,12 +98,63 @@ button {
 }
 
 /* Light/Dark Styles */
-.light-mode {
-    background-color: #ffffff;
+body.light-mode {
+    background-color: var(--bg-light);
     color: #333333;
 }
 
-.dark-mode {
-    background-color: #333333;
-    color: #ffffff;
+body.dark-mode {
+    background-color: var(--bg-dark);
+}
+
+body.dark-mode header{
+    background-color: var(--banner-dark);
+    color: var(--banner-text-dark);
+}
+
+body.dark-mode header nav button{
+    background-color: var(--banner-text-dark);
+    color: var(--fg-dark);
+    border-color: var(--banner-text-dark);
+}
+
+body.dark-mode main form{
+    background-color: var(--fg-dark);
+    box-shadow: 5px 5px 10px 0 rgba(235, 234, 232, 0.7);
+
+}
+
+body.dark-mode main form h2{
+    color: var(--text-dark);
+}
+
+body.dark-mode main form label{
+    color: var(--text-dark);
+}
+
+body.dark-mode main form input{
+    background-color: var(--input-dark);
+}
+
+body.dark-mode main h2{
+    color: var(--text-dark);
+}
+
+body.dark-mode .new{
+    box-shadow: 5px 5px 5px 0 rgba(235, 234, 232, 0.5);
+}
+
+body.dark-mode footer p{
+    color: var(--text-dark);
+}
+
+body.dark-mode footer nav a{
+    color: var(--text-dark);
+}
+
+/* Media queries for screen responsiveness */
+@media (max-width: 1025px) {
+    body{
+        padding: 0;
+    }
 }

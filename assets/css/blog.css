@@ -1,15 +1,36 @@
+/* IMPORTED CSS FILE */
 @import url('style.css');
 
+/* COLORS STORED TO THE ROOT */
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #333333;
+    --fg-light: #ebeae8;
+    --fg-dark: rgb(31, 31, 31);
+    --text-light: #333333;
+    --text-dark: #ebeae8;
+    --banner-light: rgb(62, 105, 180);
+    --banner-dark: rgb(31, 31, 31);
+    --banner-text-light: white;
+    --banner-text-dark: #ebeae8;
+    --shadow-light: rgba(0, 0, 0, 0.7);
+    --shadow-dark: rgba(235, 234, 232, 0.7);
+    --input-light: rgb(255, 255, 255);
+    --input-dark: #ebeae8;
+}
+
+/* HEADER STYLES */
 header {
     padding: 10px 0;
     background-color: rgb(62, 105, 180);
     color: white;
-
+    transition: background-color 0.5s;
 }
 
 header h1 {
     text-decoration: overline;
     margin-left: 3%;
+    transition: background-color 0.5s;
 }
 
 header nav {
@@ -27,12 +48,16 @@ header a:hover {
 }
 
 header button {
+    color: white;
     padding: 3px 5px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
     margin-left: 25px;
+    background-color: var(--bg-dark);
+    transition: background-color 0.5s;
 }
 
+/* MAIN STYLES */
 main {
     margin: 0 3%;
 }
@@ -40,6 +65,7 @@ main {
 main h2 {
     margin: 15px 0;
     font-size: 160%;
+    transition: background-color 0.5s;
 }
 
 main section.new {
@@ -47,19 +73,41 @@ main section.new {
     padding: 5px;
     border: 1px solid black;
     background-color: #ebeae8;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.7);
+    transition: background-color 0.5s;
 }
 
-section p.opening {
+/* SECTION STYLES */
+main section p.opening {
     font-size: 140%;
 }
 
-section p.text {
+main section p.text {
     font-size: 120%;
     margin-top: 5px;
 }
 
-section p.user {
+main section p.user {
     font-size: 100%;
     margin-top: 30px;
     text-decoration: overline;
+}
+
+/* Media queries for screen responsiveness */
+@media (max-width: 410px) {
+    header h1{
+        font-size: 1.5em;
+    }
+
+    main section p.opening{
+        font-size: 120%;
+    }
+
+    main section p.text {
+        font-size: 100%;
+    }
+
+    main section p.user {
+    font-size: 80%;
+}
 }
