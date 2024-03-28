@@ -4,6 +4,8 @@ const blogOutput = document.querySelector('section')
 // Grab the object array from localstorage usung JSON and assign it to a variable
 const posts = JSON.parse(localStorage.getItem('blogArray')) || []
 
+console.log(posts)
+
 // Function that will iterate over the object array and place the values in the desired html elements using its assigned property
 function addNewPost() {
     // Replaces any evisting content within the section element we are replacing
