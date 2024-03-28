@@ -6,15 +6,15 @@ This webpage is a personal blog I made for myself for the Rutgers coding bootcam
 
 ## Visuals
 
-<img src="./assets/images/blog_1png" >
+<img src="./assets/images/blog_1.png" >
 
-<img src="./assets/images/blog_2png" >
+<img src="./assets/images/blog_2.png" >
 
-<img src="./assets/images/blog_3png" >
+<img src="./assets/images/blog_3.png" >
 
-<img src="./assets/images/blog_4png" >
+<img src="./assets/images/blog_4.png" >
 
-<img src="./assets/images/blog_5png" >
+<img src="./assets/images/blog_5.png" >
 
 ## Deployment
 
