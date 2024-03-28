@@ -18,7 +18,7 @@ This webpage is a personal blog I made for myself for the Rutgers coding bootcam
 
 ## Deployment
 
-Provided as a link here - 
+Provided as a link here - https://tirwin19.github.io/Personal-Blog/
 
 ## Usage
 
