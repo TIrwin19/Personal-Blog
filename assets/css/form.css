@@ -65,8 +65,14 @@ header button {
 /* START MAIN */
 main {
     display: flex;
-    margin: 0 3%;
+    /* margin: 0 3%; */
 }
+
+/* main.image-light{
+    background-image: url('/assets/images/blog_background.jpg');
+    background-size: cover;
+    background-position: center;
+} */
 
 main form {
     background-color: #ebeae8;
